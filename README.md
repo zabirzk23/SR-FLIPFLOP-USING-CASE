@@ -1,4 +1,4 @@
-# SR-FLIPFLOP-USING-CASE
+![Screenshot 2025-05-14 102051](https://github.com/user-attachments/assets/e31e3e8d-a284-489b-9222-490db1994aa7)# SR-FLIPFLOP-USING-CASE
 
 **AIM:**
 
@@ -38,11 +38,34 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: Mohamed Zabir Khan A RegisterNumber:212224230162
 */
+
+```
+
+module exp6(S,R,clk,Q,Qbar);
+input S,R,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=S|((~R)&Q);
+Qbar=~Q;
+end
+endmodule
+
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Screenshot 2025-05-14 102051](https://github.com/user-attachments/assets/49c88306-dcd8-457f-b9f4-39c7f585087d)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-**RESULTS**
+![Screenshot 2025-05-14 102150](https://github.com/user-attachments/assets/79dd24d0-57d4-449c-8816-3c86e50f6b6b)
+
+**RESULT**
+
+ The SR flip-flop was successfully implemented, simulated, and its functionality was verified using Quartus Prime.
